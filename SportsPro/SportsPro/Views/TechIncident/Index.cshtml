@@ -1,0 +1,12 @@
+﻿@model Technician
+@{
+	ViewBag.Title = "Get Technician";
+}
+
+<h2 class="mb-3">Technician</h2>
+<form asp-action="List" method="post">
+	<select asp-for="TechnicianID" class="form-control" asp-items="@(new SelectList(ViewBag.Technicians,"TechnicianId", "TechnicianName"))">
+		<option value="0">Select a technician</option>
+	</select>
+	<button type="submit" class="btn btn-primary">Select</button>
+</form>
